@@ -1,0 +1,24 @@
+cc_library_shared {
+    name: "libcustom_gralloc_alloc",
+
+    srcs: [
+        "MtkAllocatorInterface.cpp",
+        "MtkIonAllocator.cpp",
+    ],
+
+    include_dirs: [
+        "hardware/xiaomi/common_gralloc",
+    ],
+
+    shared_libs: [
+        "liblog",
+        "libcutils",
+    ],
+
+    cflags: [
+        "-Wno-unused-parameter",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+    ],
+}
